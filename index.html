@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 class="mainHeading">Simple Calculator</h1>
+    <!-- Calculator -->
+    <form name="calculator">
+        <table class="calculator__table">
+            <tr>
+                <td colspan="4">
+                    <input class="result" type="text" name="result" id="result" disabled>
+                </td>
+            </tr>
+            <tr class="calculator__row">
+                <td colspan="2"><input type="button" name="reset" value="C" onclick="calculator.result.value = ''" /></td>
+                <td><input type="button" name="delete" value="del" onclick="calculator.result.value = calculator.result.value.substring(0, calculator.result.value.length -1 )" /></td>
+                <td><input type="button" name="divide" value="/" onclick="calculator.result.value += '/'" /></td>  
+            </tr>
+
+            <tr class="calculator__row">
+                <td><input type="button" name="seven" value="7" onclick="calculator.result.value += '7'" /></td>
+                <td><input type="button" name="eight" value="8" onclick="calculator.result.value += '8'" /></td>
+                <td><input type="button" name="nine" value="9" onclick="calculator.result.value += '9'" /></td>
+                <td><input type="button" name="multiply" value="X" onclick="calculator.result.value += '*'" /></td>  
+            </tr>
+
+            <tr class="calculator__row">
+                <td><input type="button" name="four" value="4" onclick="calculator.result.value += '4'" /></td>
+                <td><input type="button" name="five" value="5" onclick="calculator.result.value += '5'" /></td>
+                <td><input type="button" name="six" value="6" onclick="calculator.result.value += '6'" /></td>
+                <td><input type="button" name="substract" value="-" onclick="calculator.result.value += '-'" /></td>  
+            </tr>
+
+            <tr class="calculator__row">
+                <td><input type="button" name="one" value="1" onclick="calculator.result.value += '1'" /></td>
+                <td><input type="button" name="two" value="2" onclick="calculator.result.value += '2'" /></td>
+                <td><input type="button" name="three" value="3" onclick="calculator.result.value += '3'" /></td>
+                <td><input type="button" name="addition" value="+" onclick="calculator.result.value += '+'" /></td>  
+            </tr>
+
+            <tr class="calculator__row">
+                <td><input type="button" name="double__zero" value="00" onclick="calculator.result.value += '00'" /></td>
+                <td><input type="button" name="zero" value="0" onclick="calculator.result.value += '0'" /></td>
+                <td><input type="button" name="decimal" value="." onclick="calculator.result.value += '.'" /></td>
+                <td><input type="button" name="equal" class="equal" value="=" onclick="calculator.result.value = eval(calculator.result.value)" /></td>  
+            </tr>
+        </table>
+    </form>
+
+    <script src="./app.js"></script>
+</body>
+</html>
